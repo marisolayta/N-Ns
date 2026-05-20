@@ -308,15 +308,11 @@
                 </div>
 
                 <div class="glass contact-form-wrap">
-                    <form
-                        id="contactForm"
-                        action="https://formsubmit.co/nongandnengs@gmail.com"
-                        method="POST"
-                    >
+                    <!--
+                      FORMSPREE SETUP: see FORMSPREE_FORM_ID in the script at bottom of this file
+                    -->
+                    <form id="contactForm" action="#" method="POST">
                         <input type="hidden" name="_subject" value="New message from N&NS website">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" id="formNext" value="">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" class="form-input" required>
                         </div>
@@ -406,28 +402,43 @@
         });
 
         (function () {
+            var FORMSPREE_FORM_ID = 'xlgvjjaj';
+
             var contactForm = document.getElementById('contactForm');
             var formStatus = document.getElementById('formStatus');
             var submitBtn = document.getElementById('formSubmitBtn');
-            var formNext = document.getElementById('formNext');
-            var pageBase = window.location.origin + window.location.pathname;
+            var defaultBtnHtml = submitBtn.innerHTML;
 
-            formNext.value = pageBase + '?sent=true#contact';
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                formStatus.className = 'form-status';
+                formStatus.textContent = '';
 
-            if (window.location.search.indexOf('sent=true') !== -1) {
-                formStatus.className = 'form-status form-status--success';
-                formStatus.textContent = 'Message sent! We will get back to you soon.';
-                setActiveNav('contact');
-                var contactSection = document.getElementById('contact');
-                if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-                history.replaceState(null, '', pageBase + '#contact');
-            }
-
-            contactForm.addEventListener('submit', function () {
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> SENDING...';
+
+                fetch('https://formspree.io/f/' + FORMSPREE_FORM_ID, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { Accept: 'application/json' }
+                })
+                    .then(function (response) {
+                        if (response.ok) {
+                            formStatus.className = 'form-status form-status--success';
+                            formStatus.textContent = 'Message sent! We will get back to you soon at your email.';
+                            contactForm.reset();
+                        } else {
+                            throw new Error('Send failed');
+                        }
+                    })
+                    .catch(function () {
+                        formStatus.className = 'form-status form-status--error';
+                        formStatus.textContent = 'Could not send. Email us at nongandnengs@gmail.com';
+                    })
+                    .finally(function () {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = defaultBtnHtml;
+                    });
             });
         })();
 
