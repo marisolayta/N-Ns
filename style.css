@@ -1021,13 +1021,6 @@ img {
     min-height: 140px;
 }
 
-.form-honey {
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-    pointer-events: none;
-}
-
 .form-status {
     margin: 0 0 1rem;
     font-size: 0.88rem;
