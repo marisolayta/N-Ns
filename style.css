@@ -1004,6 +1004,27 @@ img {
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px rgba(8, 12, 28, 0.95) inset;
+    -webkit-text-fill-color: var(--text);
+    caret-color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.contact-form-wrap input[type="hidden"] {
+    display: none !important;
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .form-input::placeholder,
 .form-textarea::placeholder {
     color: rgba(148, 163, 184, 0.6);
