@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="N&NS — A collaborative software development team nurturing ideas and navigating innovation.">
+    <title>N&NS | Nurture, Navigate</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--cyan" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--purple" aria-hidden="true"></div>
+
+    <div class="page-content">
+        <!-- NAVBAR -->
+        <nav class="navbar" id="navbar">
+            <div class="navbar__inner">
+                <a href="#home" class="brand">
+                    <img src="img/logo.png" alt="N&NS Logo" class="brand__logo">
+                    <span class="brand__name">N&NS</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">HOME</a>
+                    <a href="#about" class="nav-link">ABOUT</a>
+                    <a href="#mission" class="nav-link">MISSION</a>
+                    <a href="#values" class="nav-link">VALUES</a>
+                    <a href="#team" class="nav-link">TEAM</a>
+                    <a href="#contact" class="nav-link">CONTACT</a>
+                </div>
+
+                <button onclick="toggleMobileMenu()" class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <div id="mobileMenu" class="mobile-menu">
+                <div class="mobile-menu__links">
+                    <a href="#home" onclick="toggleMobileMenu()" class="nav-link">HOME</a>
+                    <a href="#about" onclick="toggleMobileMenu()" class="nav-link">ABOUT</a>
+                    <a href="#mission" onclick="toggleMobileMenu()" class="nav-link">MISSION &amp; VISION</a>
+                    <a href="#values" onclick="toggleMobileMenu()" class="nav-link">CORE VALUES</a>
+                    <a href="#team" onclick="toggleMobileMenu()" class="nav-link">OUR TEAM</a>
+                    <a href="#contact" onclick="toggleMobileMenu()" class="nav-link">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero__inner">
+                <div class="hero-content">
+                    <div class="hero-panel">
+                        <div class="hero-panel__logo-zone">
+                            <div class="hero__logo-wrap">
+                                <img src="img/logo.png" alt="N&NS Logo" class="hero__logo">
+                            </div>
+                        </div>
+
+                        <div class="hero-panel__bar">
+                            <span class="hero-panel__dot hero-panel__dot--cyan"></span>
+                            <span class="hero-panel__dot hero-panel__dot--purple"></span>
+                            <span class="hero-panel__dot hero-panel__dot--pink"></span>
+                            <span class="hero-panel__bar-title">n&amp;ns_init.sh</span>
+                        </div>
+
+                        <div class="hero-panel__body">
+                            <div class="hero__badge">
+                                <span class="pulse-dot"></span>
+                                // COLLABORATIVE SOFTWARE DEVELOPMENT
+                            </div>
+
+                            <h1 class="hero__title">
+                                <span class="hero__line">
+                                    <span class="hero__prompt">&gt;</span>
+                                    WE <span class="gradient-text">NURTURE</span> IDEAS.
+                                </span>
+                                <span class="hero__line">
+                                    <span class="hero__prompt">&gt;</span>
+                                    WE <span class="gradient-text">NAVIGATE</span> INNOVATION.
+                                </span>
+                            </h1>
+
+                            <p class="hero__desc">
+                                A team of friends building meaningful and impactful digital solutions through creativity, collaboration, and cutting-edge technology.
+                            </p>
+
+                            <div class="hero__tags">
+                                <span class="hero__tag">friendship</span>
+                                <span class="hero__tag">innovation</span>
+                                <span class="hero__tag">full-stack</span>
+                            </div>
+
+                            <div class="hero__actions">
+                                <a href="#contact" class="btn btn--primary">
+                                    <i class="fa-solid fa-paper-plane"></i> GET IN TOUCH
+                                </a>
+                                <a href="#about" class="btn btn--ghost">
+                                    <i class="fa-solid fa-code"></i> LEARN MORE
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="hero-panel__footer">
+                            <div class="stat">
+                                <div class="stat__value">7+</div>
+                                <div class="stat__label">TEAM MEMBERS</div>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat">
+                                <div class="stat__value">100%</div>
+                                <div class="stat__label">PASSION DRIVEN</div>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat">
+                                <div class="stat__value">&infin;</div>
+                                <div class="stat__label">POSSIBILITIES</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="hero__logo-wrap">
+                        <img src="img/logo.png" alt="N&NS Logo" class="hero__logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-hint">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section section--alt">
+            <div class="section__inner about-layout">
+                <div class="about-visual">
+                    <div class="about-logo-frame">
+                        <div class="about-logo-frame__glow" aria-hidden="true"></div>
+                        <img src="img/logo2.png" alt="N&NS brand mark" class="about-logo">
+                    </div>
+                </div>
+
+                <div class="about-copy">
+                    <span class="section-tag">// ABOUT US</span>
+                    <h2 class="section-title section-title--left">WHAT IS N&NS?</h2>
+                    <p class="about-text">
+                        N&NS is a collaborative software development company built on friendship, creativity, and innovation.
+                        We are a group of friends who turned our passion for technology into a mission —
+                        <span class="highlight-cyan">nurturing ideas</span> and
+                        <span class="highlight-purple">navigating</span> them into powerful digital solutions.
+                    </p>
+                    <div class="about-pillars">
+                        <div class="about-pillar">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Built on friendship</span>
+                        </div>
+                        <div class="about-pillar">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Driven by creativity</span>
+                        </div>
+                        <div class="about-pillar">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>Powered by technology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION & VISION -->
+        <section id="mission" class="section">
+            <div class="section__inner">
+                <div class="section-header">
+                    <span class="section-tag">// OUR PURPOSE</span>
+                    <h2 class="section-title">MISSION &amp; VISION</h2>
+                </div>
+                <div class="mission-grid">
+                    <div class="glass mission-card mission-card--mission">
+                        <div class="mission-card__label">MISSION</div>
+                        <p class="mission-card__text">To nurture ideas and develop innovative, reliable, and user-friendly technological solutions that empower individuals and communities.</p>
+                    </div>
+                    <div class="glass mission-card mission-card--vision">
+                        <div class="mission-card__label">VISION</div>
+                        <p class="mission-card__text">To become a leading technology-driven company recognized for innovation, excellence, and building smarter digital solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE VALUES -->
+        <section id="values" class="section section--alt">
+            <div class="section__inner">
+                <div class="section-header">
+                    <span class="section-tag">// WHAT WE STAND FOR</span>
+                    <h2 class="section-title">CORE VALUES</h2>
+                </div>
+                <div class="values-grid">
+                    <div class="glass value-card">
+                        <div class="value-card__icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h4 class="value-card__title">INNOVATION</h4>
+                        <p class="value-card__desc">We push boundaries and explore new possibilities to create cutting-edge solutions.</p>
+                    </div>
+                    <div class="glass value-card">
+                        <div class="value-card__icon"><i class="fa-solid fa-star"></i></div>
+                        <h4 class="value-card__title">EXCELLENCE</h4>
+                        <p class="value-card__desc">Committed to delivering high-quality, reliable, and user-friendly digital solutions.</p>
+                    </div>
+                    <div class="glass value-card">
+                        <div class="value-card__icon"><i class="fa-solid fa-people-group"></i></div>
+                        <h4 class="value-card__title">COLLABORATION</h4>
+                        <p class="value-card__desc">We believe in the power of teamwork and friendship to achieve remarkable results.</p>
+                    </div>
+                    <div class="glass value-card">
+                        <div class="value-card__icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h4 class="value-card__title">GROWTH</h4>
+                        <p class="value-card__desc">We nurture ideas from concept to scalable, impactful solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section id="team" class="section section--team">
+            <div class="section__inner">
+                <div class="section-header">
+                    <span class="section-tag">// THE SQUAD</span>
+                    <h2 class="section-title">OUR TEAM</h2>
+                    <p class="section-subtitle">Friends building the future together</p>
+                </div>
+
+                <div class="team-grid" id="teamGrid">
+                    <div class="team-row team-row--lead">
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="img/Justin Mie B. Roble.png" alt="Justin Mie B. Roble">
+                            </div>
+                            <h4 class="team-card__name">JUSTIN MIE B. ROBLE</h4>
+                            <p class="team-card__role role-cyan">Project Manager</p>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="img/Jely B. Lamban.png" alt="Jely B. Lamban">
+                            </div>
+                            <h4 class="team-card__name">JELY B. LAMBAN</h4>
+                            <p class="team-card__role role-purple">Developer</p>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="img/Princess Kyle Arcene D. Lavendia.jpg" alt="Princess Kyle Arcene D. Lavendia">
+                            </div>
+                            <h4 class="team-card__name">PRINCESS KYLE ARCENE D. LAVENDIA</h4>
+                            <p class="team-card__role role-pink">Developer</p>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="img/Kyla L. Naquila.png" alt="Kyla L. Naquila">
+                            </div>
+                            <h4 class="team-card__name">KYLA L. NAQUILA</h4>
+                            <p class="team-card__role role-cyan">UI/UX Designer</p>
+                        </div>
+                    </div>
+
+                    <div class="team-row team-row--rest">
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="img/Jenette C. Dumanayos.png" alt="Jenette C. Dumanayos">
+                            </div>
+                            <h4 class="team-card__name">JENETTE C. DUMANAYOS</h4>
+                            <p class="team-card__role role-purple">UI/UX Designer</p>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="img/Marisol T. Ayta.jpg" alt="Marisol T. Ayta">
+                            </div>
+                            <h4 class="team-card__name">MARISOL T. AYTA</h4>
+                            <p class="team-card__role role-pink">Product Researcher</p>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card__photo">
+                                <img src="img/Camille Grace Esperanza.jpg" alt="Camille Grace Esperanza">
+                            </div>
+                            <h4 class="team-card__name">CAMILLE GRACE ESPERANZA</h4>
+                            <p class="team-card__role role-cyan">Product Researcher</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section--alt">
+            <div class="section__inner">
+                <div class="section-header">
+                    <span class="section-tag">// GET IN TOUCH</span>
+                    <h2 class="section-title">LET'S CREATE SOMETHING GREAT</h2>
+                    <p class="section-subtitle">Ready to bring your idea to life?</p>
+                </div>
+
+                <div class="glass contact-form-wrap">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your project..." rows="6" class="form-textarea" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary form-submit">
+                            <i class="fa-solid fa-terminal"></i> SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__brand">
+                <img src="img/logo.png" alt="N&NS" class="footer__logo">
+                <span class="footer__name">N&NS</span>
+            </div>
+            <p class="footer__copy">
+                &copy; 2026 N&NS
+                <span class="footer__dots">&bull;</span> Nurture
+                <span class="footer__dots">&bull;</span> Navigate
+                <span class="footer__dots">&bull;</span> Innovate
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        var sections = document.querySelectorAll('section[id]');
+        var navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+        var navbarHeight = 90;
+
+        function setActiveNav(sectionId) {
+            navLinks.forEach(function (link) {
+                var isActive = link.getAttribute('href') === '#' + sectionId;
+                link.classList.toggle('active', isActive);
+            });
+        }
+
+        function getCurrentSection() {
+            var scrollPos = window.scrollY + navbarHeight + 80;
+            var current = 'home';
+
+            sections.forEach(function (section) {
+                if (section.offsetTop <= scrollPos) {
+                    current = section.id;
+                }
+            });
+
+            return current;
+        }
+
+        function updateActiveNav() {
+            setActiveNav(getCurrentSection());
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+
+        window.addEventListener('scroll', function () {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+            updateActiveNav();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                var target = this.getAttribute('href');
+                if (target !== '#') {
+                    e.preventDefault();
+                    var sectionId = target.slice(1);
+                    setActiveNav(sectionId);
+
+                    var el = target === '#team'
+                        ? document.getElementById('teamGrid')
+                        : document.querySelector(target);
+                    if (el) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Message received! The N&NS team will get back to you soon.');
+            this.reset();
+        });
+
+        setActiveNav('home');
+        updateActiveNav();
+    </script>
+</body>
+</html>
